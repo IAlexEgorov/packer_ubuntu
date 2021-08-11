@@ -1,0 +1,65 @@
+{
+  "builders": [
+    {
+      "type": "vsphere-iso",
+  
+      "vcenter_server": "{{user `vcenter_server`}}",
+      "username": "{{user `vcenter_username`}}",
+      "password": "{{user `vcenter_password`}}",
+      "insecure_connection": "true",
+      "datacenter": "{{user `vcenter_datacenter`}}",
+  
+      "vm_name": "{{user `vm_name`}}",
+    
+      "datastore": "{{user `vcenter_datastore`}}",
+      "folder": "{{user `vcenter_folder`}}",
+      "host": "{{user `host`}}",
+      "cluster": "{{user `vcenter_cluster`}}",
+
+      "convert_to_template": "true",
+    
+      "network": "{{user `vcenter_network`}}",
+      "network_card": "vmxnet3",
+    
+      "boot_order": "disk,cdrom",
+  
+      "guest_os_type": "ubuntu64Guest",
+  
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
+  
+      "CPUs": "{{user `vm_cpu_num`}}",
+      "RAM": "{{user `vm_mem_size`}}",
+      "RAM_reserve_all": true,
+  
+      "disk_controller_type": "pvscsi",
+      "disk_size": "{{user `vm_disk_size`}}",
+      "disk_thin_provisioned": true,
+  
+      "iso_urls": "{{user `iso_urls`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+
+      "boot_wait": "5s",
+      "floppy_files": ["./preseed.cfg"],
+      "boot_command": [
+        "<esc><wait>",
+        "<esc><wait>",
+        "<enter><wait>",
+        "/install/vmlinuz<wait>",
+        " initrd=/install/initrd.gz",
+        " auto-install/enable=true",
+        " debconf/priority=critical",
+        " file=/media/preseed.cfg",
+        " -- <wait>",
+        "<enter><wait>"
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+       "type": "shell",
+       "script": "script.sh"
+     }
+   ]
+}

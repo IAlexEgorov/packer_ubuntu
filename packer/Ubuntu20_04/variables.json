@@ -1,0 +1,24 @@
+{
+  "vm_cpu_num": "2",
+  "vm_mem_size": "1024",
+  "vm_disk_size": "10240",
+
+  "vm_name": "Ubuntu-2004-Template",  
+  "vcenter_server":"192.168.15.34",
+  "vcenter_username":"intern@web-bee.loc",
+  "vcenter_password":"88[pT,Jvdw#~H3=@",
+  
+  "vcenter_datacenter": "dc1",
+  "vcenter_datastore": "ds1 - ssd esxi-test",
+  "vcenter_cluster": "cluster1",
+  "vcenter_folder": "Templates",
+  "vcenter_network": "VM Network",
+  "guest_os_type": "ubuntu64Guest",
+
+  "iso_urls": "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso",
+  "iso_checksum_type": "sha256",
+  "iso_checksum": "f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
+  
+  "ssh_username": "alex_e",
+  "ssh_password": "1234"
+}

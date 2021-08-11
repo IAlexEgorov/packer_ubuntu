@@ -1,0 +1,24 @@
+{
+  "vm-name": "Ubuntu-1804-Template",
+    
+  "vcenter-server":"192.168.15.34",
+  "vcenter-username":"intern@web-bee.loc",
+  "vcenter-password": "88[pT,Jvdw#~H3=@",
+  
+  "datacenter": "dc1",
+  "datastore": "ds1 - ssd esxi-test",
+  "folder": "Templates",
+  "cluster": "cluster1",
+  "network": "VM Network",
+  
+  "vm-cpu-num": "1",
+  "vm-mem-size": "1024",
+  "vm-disk-size": "10240",
+    
+  "ssh-username": "alex_e",
+  "ssh-password": "1234",
+  
+  "iso-url": "http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.5-server-amd64.iso",
+  "iso-checksum": "8c5fc24894394035402f66f3824beb7234b757dd2b5531379cb310cedfdf0996",
+  "iso-checksum-type": "sha256"
+}
