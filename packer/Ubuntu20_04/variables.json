@@ -4,7 +4,7 @@
   "vm_disk_size": "10240",
 
   "vm_name": "Ubuntu-2004-Template",  
-  "vcenter_server":"192.168.15.34",
+  "vcenter_server":"192.168.15.13",
   "vcenter_username":"intern@web-bee.loc",
   "vcenter_password":"88[pT,Jvdw#~H3=@",
   
