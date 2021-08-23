@@ -1,4 +1,4 @@
-echo '#!/bin/bash -e
+#!/bin/bash -e
 
 cd ~
 mkdir .ssh
@@ -7,8 +7,12 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5JSRkbfuFBLKLYdNwZgBnikG5AsFcKuPDRf
 
 sudo echo 'nameserver 8.8.8.8' | sudo tee /etc/resolv.conf > /dev/null
 sudo apt-get update -y
-sudo echo 'nameserver 8.8.8.8' | sudo tee /etc/resolvconf/resolv.conf.d/base > /dev/null
 
 sudo wget https://apt.puppetlabs.com/puppet6-release-bionic.deb
 sudo dpkg -i puppet6-release-bionic.deb
-sudo apt update -y' > script.sh 
+sudo apt update -y
+sudo apt install puppet-agent -y
+sudo apt update -y
+puppet config set server foreman.web-bee.loc --section=main
+puppet config set runinterval 30m --section=main
+puppet resource service puppet ensure=running enable=true
