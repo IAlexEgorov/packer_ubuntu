@@ -3,7 +3,7 @@
   "vm_mem_size": "1024",
   "vm_disk_size": "10240",
 
-  "vm_name": "Ubuntu-2004-Template",  
+  "vm_name": "Ubuntu-20-04",  
   "vcenter_server":"192.168.15.13",
   "vcenter_username":"intern@web-bee.loc",
   "vcenter_password":"88[pT,Jvdw#~H3=@",
@@ -19,6 +19,6 @@
   "iso_checksum_type": "sha256",
   "iso_checksum": "f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
   
-  "ssh_username": "alex_e",
+  "ssh_username": "admin",
   "ssh_password": "1234"
 }
