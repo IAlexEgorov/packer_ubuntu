@@ -12,11 +12,11 @@
       "vm_name": "{{user `vm_name`}}",
     
       "datastore": "{{user `vcenter_datastore`}}",
-      "folder": "{{user `vcenter_folder`}}",
+      
       "host": "{{user `host`}}",
       "cluster": "{{user `vcenter_cluster`}}",
 
-      "convert_to_template": "true",
+      "convert_to_template": "false",
     
       "network": "{{user `vcenter_network`}}",
       "network_card": "vmxnet3",

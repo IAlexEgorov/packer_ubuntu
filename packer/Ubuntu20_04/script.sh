@@ -12,7 +12,5 @@ sudo wget https://apt.puppetlabs.com/puppet6-release-bionic.deb
 sudo dpkg -i puppet6-release-bionic.deb
 sudo apt update -y
 sudo apt install puppet-agent -y
+sudo apt install puppetserver -y
 sudo apt update -y
-puppet config set server foreman.web-bee.loc --section=main
-puppet config set runinterval 30m --section=main
-puppet resource service puppet ensure=running enable=true
