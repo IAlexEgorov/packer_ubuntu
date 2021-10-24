@@ -3,3 +3,5 @@ First create a VMware template with Packer then use Terraform to provision VMs f
 
 ## More instructions
 You can find more instructions in /packer/.../README.md
+
+If you run main.tf, you will have to change required parameters 
