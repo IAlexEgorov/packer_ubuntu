@@ -1,7 +1,7 @@
 provider "vsphere" {
-  user           = "intern@web-bee.loc"
-  password       = "88[pT,Jvdw#~H3=@"
-  vsphere_server = "192.168.15.34"
+  user           = "user"
+  password       = "password"
+  vsphere_server = "machine_ip"
  
   allow_unverified_ssl = true
 }
